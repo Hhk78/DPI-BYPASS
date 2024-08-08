@@ -16,3 +16,7 @@ Türkiye'de kesin çalışan:
 ```
 sudo ./libdpitunnel-cli-x64.so -doh -doh-server https://dns.google/dns-query -ttl 3 -ca-bundle-path "./ca.bundle" -desync-attacks disorder_fake
 ```
+# Openwrt bağımlılık:
+```
+opkg install libatomic libstdcpp
+```
