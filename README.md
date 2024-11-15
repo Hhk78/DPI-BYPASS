@@ -21,3 +21,9 @@ sudo ./dpitunnel-cli-amd64 -doh -doh-server https://1.1.1.1/dns-query -wrong-seq
 ```
 opkg install libatomic libstdcpp
 ```
+```
+# V2RAY tablosu içinde, belirli bir UID'yi kuralların dışında tut
+iptables -t nat -A OUTPUT -p tcp -m owner --uid-owner <UID> -j RETURN
+iptables -t mangle -A OUTPUT -m owner --uid-owner <UID> -j RETURN
+
+```
